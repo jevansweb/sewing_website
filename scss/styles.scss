@@ -1,0 +1,105 @@
+@import "../scss/img";
+@import "../scss/button";
+
+$primary-color: gray;
+$secondary-color: yellow;
+
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+// Grid
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
+}
+
+#header {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px black solid;
+    
+
+    .header-logo {
+        display: inline-block;
+        margin-bottom: 0.5em;
+        width: fit-content;
+        text-align: center;
+        font-size: 2.5em;
+        color: #52ab98;
+        padding: 0.3em 0;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: 900px;
+        justify-content: space-between;
+        max-width: 900px;
+        padding: 0;
+        color: #f3f3f3;
+    }
+
+    li {
+        display: inline-block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        min-width: 180px;
+        margin: auto;
+        margin-bottom: 5px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+}
+
+.section-a {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/-1;
+    grid-row: 2;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-color: #c8d8e4 ;
+    border: 1px black solid;
+}
+.section-b {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/-1;
+    grid-row: 3;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-color: #2b6777 ;
+    border: 1px black solid;
+
+    .image-wrapper {
+        border: 1px solid red;
+        display: inline-block;
+        width: 15em;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
