@@ -17,3 +17,21 @@
   
 
 }
+
+.return-btn {
+    background-color: #52ab98;
+    border: solid black 1px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+    background-color: yellow;
+    
+    transform: scale(1.05);
+    opacity: 1;
+    color: #333;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    }
+}

@@ -9,7 +9,7 @@ $secondary-color: yellow;
     margin: 0;
     box-sizing: border-box;
     
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Merriweather", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -17,12 +17,49 @@ $secondary-color: yellow;
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    // repeat(auto-fit, minmax(270px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
+    // repeat(auto-fit, minmax(60px, 1fr));
+    
+    // //* {
+    //     border: 1px solid black;
+    // }
 }
 
+#footer {
+    background-color: #ffffff;
+    grid-column: 1/13;
+    grid-row: 4;
+    border: 1px solid red;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15vw;
+
+    .copyright {
+        display: inline-block;
+        border: 1px solid red;
+        font-size: 12px;
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    .return-btn {
+            display: inline-block;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            min-width: 160px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.7;
+        }
+}
+
+
 #header {
-    grid-column: 1/-1;
+    grid-column: 1/13;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,24 +67,25 @@ $secondary-color: yellow;
     padding: 1em 0;
     overflow: hidden;
     background-color: #ffffff;
-    border: 1px black solid;
     
 
     .header-logo {
         display: inline-block;
-        margin-bottom: 0.5em;
-        width: fit-content;
+        width: 100%;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 5em;
         color: #52ab98;
         padding: 0.3em 0;
+        padding-top: 0;
+        font-family: "Montserrat";
     }
 
     .nav-bar {
         display: flex;
         flex-wrap: wrap;
+        grid-column: 2/6;
+        width: 100%;
         height: auto;
-        width: 900px;
         justify-content: space-between;
         max-width: 900px;
         padding: 0;
@@ -59,35 +97,70 @@ $secondary-color: yellow;
         padding-top: 5px;
         padding-bottom: 5px;
         min-width: 180px;
-        margin: auto;
         margin-bottom: 5px;
+        margin: auto;
         text-align: center;
-        font-weight: bold;
+        font-weight: 100;
         font-size: 1.3em;
+        font-family: "Montserrat";
     }
 }
 
 .section-a {
     display: flex;
-    flex-wrap: wrap;
-    grid-column: 1/-1;
-    grid-row: 2;
-    justify-content: center;
+    grid-column: 1/13;
     align-items: center;
-    min-height: 400px;
-    background-color: #c8d8e4 ;
-    border: 1px black solid;
+    flex-wrap: wrap;
+    min-height: fit-content;
+    padding: 1em 0;
+    background-color: #c8d8e4;
 }
+        
+
+.about-1 {
+            display: inline-block;
+            border-right:  solid #52ab98; 
+            border-left:  solid #52ab98;
+            padding: 0.5em;
+            margin: 1em; 
+            width: 45vw;
+            border-radius: 8px; 
+            text-align: center;
+            color: #550047;
+            font-size: 1.1em;
+            font-weight: 700;
+            line-height: 1.1;
+            font-family: "Merriweather";
+            align-self: center;
+}
+.about-2 {
+            display: inline-block; 
+            border-left: solid #52ab98;
+            border-right: solid #52ab98;
+            align-self: center;
+            grid-column: 3/6;
+            width: 45vw;
+            padding: 0.5em;
+            margin: 1em;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 1.1;
+            font-weight: 700;
+            color: #00082c;
+            font-size: 1.1em;
+}
+
+
+
 .section-b {
     display: flex;
     flex-wrap: wrap;
-    grid-column: 1/-1;
+    grid-column: 1/13;
     grid-row: 3;
     justify-content: center;
     align-items: center;
     min-height: 400px;
     background-color: #2b6777 ;
-    border: 1px black solid;
 
     .image-wrapper {
         border: 1px solid red;
